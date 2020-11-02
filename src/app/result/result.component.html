@@ -1,0 +1,5 @@
+<ul>
+  <li><b>Deflection at part end</b> <small>mm</small> <b id="defl">{{ result.defl }}</b></li>
+  <li><b>Max stress (z=L at y<small><b>b</b></small>)</b> <small>N/mm^2</small> <b id="stress">{{ result.stress }}</b></li>
+  <li><b>Tolerance perc. of initial</b> <span [style.backgroundColor]="isInvalid ? 'pink' : 'transparent'" [style.backgroundColor]="isAcceptable ? 'palegreen' : 'gold'"><small>%</small> <b id="stress">{{ result.tolerance }}</b> </span></li>
+</ul>

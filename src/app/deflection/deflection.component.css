@@ -1,0 +1,26 @@
+img {
+    height:284px;
+}
+
+td {
+    border: none;
+}
+
+.position-z {
+    border-width: 0.5px;
+    height: 30px;
+}
+
+.part-container {
+    position: relative;
+    width: 103px;
+    height: 294px;
+}
+
+.part-ul {
+    margin-bottom: 0;
+}
+
+.select-material {
+    margin-bottom: 10px;
+}

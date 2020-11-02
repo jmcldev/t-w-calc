@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.bd-title {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+input {
+    max-width: 63px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    min-height: 30px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.variations {
+    margin-top: 35px;
+}
+
+.v-chart {
+    margin: auto;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.metric   .metric   { display: inline; }
+.metric   .imperial { display: none;   }
+.imperial .metric   { display: none;   }
+.imperial .imperial { display: inline; }
+

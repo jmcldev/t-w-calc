@@ -1,0 +1,44 @@
+<td class="part-container">
+  <img alt="Thin-walled part" src="/assets/img/Asset_7.svg">
+</td>
+<td>
+  <ul class="part-ul">
+    <li>Thickness at end y<small>e</small> <small>mm</small></li>
+    <li>Thickness at base y<small>b</small> <small>mm</small></li>
+    <li>Length L <small>mm</small></li>
+    <li>Width b <small>mm</small></li>
+    <li>Pos. of tool (z=L - end) z <small>mm</small></li>
+    <li>Tolerance &perp; <small>mm</small></li>
+    <li>Cutting force (auto) F<small>y</small> <small>N</small> <input type="checkbox" [checked]="checked" (change)="checked = !checked" (click)="onUnCheck()"></li>
+    <li>Material:</li>
+  </ul>
+  <!-- <select id="ux_UNITPOWER" onchange="uxPick('UNITPOWER')">
+    <option value="Aluminum">Aluminum</option>
+    <option value="Copper">Copper/Brass/Bronze</option>
+    <option value="Iron">Iron</option>
+    <option value="Steel">Steel</option>
+    <option value="Stainless">Stainless Steel</option>
+    <option value="Titanium">Titanium</option>
+    <option value="Plastic">Plastic</option>
+    <option value="Wood">Wood</option>
+    <option value="CUSTOM">CUSTOM</option>
+  </select> -->
+  
+  <select class="select-material" [(ngModel)]="selectedOption" (change)="onSelectMaterial(selectedOption)" id="ux_UNITPOWER" onchange="uxPick('UNITPOWER')">
+    <option *ngFor="let option of options" [value]="option.value">
+      {{option.name}}
+    </option>
+  </select>
+
+</td>
+<td>
+  <ul>
+    <li><input [(ngModel)]="v.ye" (blur)="calcDefl()"></li>
+    <li><input [(ngModel)]="v.yb" (blur)="calcDefl()"></li>
+    <li><input [(ngModel)]="v.L" (blur)="calcDefl()"></li>
+    <li><input [(ngModel)]="v.b" (blur)="calcDefl()"></li>
+    <li><input class="position-z" type="number" [(ngModel)]="v.z" (blur)="calcDefl()" [style.backgroundColor]="isInvalid ? 'pink' : 'transparent'"></li>
+    <li><input [(ngModel)]="v.delta" (blur)="calcDefl()"></li>
+    <li><input [(ngModel)]="v.F" (blur)="calcDefl()" [disabled]="checked"></li>
+  </ul> 
+</td>
